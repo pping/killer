@@ -1,98 +1,97 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>在个人博客里添加评论系统--Gitalk | aymar.cn</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613725549360">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613725929193">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="alternate" type="application/atom+xml" title="在个人博客里添加评论系统--Gitalk | aymar.cn - Atom Feed" href="https://pping.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
+    <meta name="description" content="0 前言
+前提是 搭建了博客，使用的主题是 [jekyll-theme-H2O][] 这个主题。其余的可以借鉴，但不一定完全适用。
+Gitalk 是一个评论系统，在个人博客里添加了之后就可以很简便的进行评论和回复了。
+1 注册 GitHub..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://pping.github.io">
-        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613725549360" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://pping.github.io">
-        <h1 class="site-title">aymar.cn</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://pping.github.io">
+  <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613725929193" alt="">
+  </a>
+  <h1 class="site-title">
+    aymar.cn
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-          <h2 class="post-title">在个人博客里添加评论系统--Gitalk</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-19</span>
+          <article class="post">
+            <h2 class="post-title">
+              在个人博客里添加评论系统--Gitalk
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-02-19
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <h1 id="0-前言">0 前言</h1>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="0-前言">0 前言</h1>
 <p>前提是 搭建了博客，使用的主题是 [jekyll-theme-H2O][] 这个主题。其余的可以借鉴，但不一定完全适用。</p>
 <p>Gitalk 是一个评论系统，在个人博客里添加了之后就可以很简便的进行评论和回复了。</p>
 <h1 id="1-注册-github-application">1 注册 GitHub Application</h1>
@@ -158,86 +157,115 @@
 <p>再去看一下你博客里面的文章，如果说出现了评论框，那就是成功了。</p>
 <figure data-type="image" tabindex="9"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_c8371a65.png" alt="ThirdPartyImage_c8371a65.png" loading="lazy"></figure>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#0-%E5%89%8D%E8%A8%80">0 前言</a></li>
+<li><a href="#1-%E6%B3%A8%E5%86%8C-github-application">1 注册 GitHub Application</a></li>
+<li><a href="#2-%E9%85%8D%E7%BD%AE-_configyml">2 配置 <code>_config.yml</code></a></li>
+<li><a href="#3-%E9%85%8D%E7%BD%AE-posthtml">3 配置 <code>post.html</code></a>
+<ul>
+<li><a href="#30-%E5%9C%A8-html-%E8%BF%99%E4%B8%AA%E6%A0%87%E7%AD%BE%E4%B8%8B%E6%B7%BB%E5%8A%A0">3.0 在 <code>&lt;html&gt;</code> 这个标签下添加</a></li>
+<li><a href="#31-%E5%9C%A8-include-footerhtml-%E9%87%8C%E6%B7%BB%E5%8A%A0">3.1 在 {% include footer.html %} 里添加</a></li>
+<li><a href="#32-%E5%9C%A8-if-sitecommentsdisqus-%E5%90%8E%E9%9D%A2%E6%B7%BB%E5%8A%A0">3.2 在 {% if site.comments.disqus %} 后面添加</a></li>
+</ul>
+</li>
+<li><a href="#4-%E5%BC%80-issues">4 开 issues</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/">
+            <div class="next">下一篇</div>
+            <a href="https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/">
               <h3 class="post-title">
-                下一篇：如何拥有多个GitHub Pages
+                如何拥有多个GitHub Pages
               </h3>
             </a>
           </div>
+        
+
+        
           
-      </div>
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-      
-        
-          <div id="gitalk-container"></div>
-        
+<div id="gitalk-container"></div>
 
-        
-      
+<script>
 
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
-</div>
+  var gitalk = new Gitalk({
+    clientID: '3911bd8dbdeee631dbc3',
+    clientSecret: '254c9e3f58b4a0441d0ca7e338fe9eb43d5a181c',
+    repo: 'pping.github.io',
+    owner: 'pping',
+    admin: ['pping'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
 
+          
+        
 
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <div class="site-footer">
+  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a>
+  <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
     <script>
+      hljs.initHighlightingOnLoad()
 
-      var gitalk = new Gitalk({
-        clientID: '3911bd8dbdeee631dbc3',
-        clientSecret: '254c9e3f58b4a0441d0ca7e338fe9eb43d5a181c',
-        repo: 'pping.github.io',
-        owner: 'pping',
-        admin: ['pping'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-      gitalk.render('gitalk-container')
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
     </script>
-  
-
-  
-
-
-
-
   </body>
 </html>
