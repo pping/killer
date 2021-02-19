@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-02-19T06:17:07.085Z</updated>
+    <title>aymar.cn</title>
+    <updated>2021-02-19T06:47:01.972Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://pping.github.io/images/avatar.png</logo>
     <icon>https://pping.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, aymar.cn</rights>
     <entry>
         <title type="html"><![CDATA[Github Pages + Jekyll搭建博客之SEO]]></title>
         <id>https://pping.github.io/post/test/</id>
