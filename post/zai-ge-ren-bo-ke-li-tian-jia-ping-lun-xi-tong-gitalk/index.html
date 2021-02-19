@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>在个人博客里添加评论系统--Gitalk | aymar.cn</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613721202064">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://pping.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://pping.github.io">
+        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613721202064" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://pping.github.io">
+        <h1 class="site-title">aymar.cn</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">在个人博客里添加评论系统--Gitalk</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-19</span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="0-前言">0 前言</h1>
+<p>前提是 搭建了博客，使用的主题是 <a href="https://github.com/kaeyleo/jekyll-theme-H2O/">jekyll-theme-H2O</a> 这个主题。其余的可以借鉴，但不一定完全适用。</p>
+<p>Gitalk 是一个评论系统，在个人博客里添加了之后就可以很简便的进行评论和回复了。</p>
+<h1 id="1-注册-github-application">1 注册 GitHub Application</h1>
+<p>首先要注册一下 GitHub Application，</p>
+<blockquote>
+<p><a href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a></p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_bd8d49fb.png" alt="ThirdPartyImage_bd8d49fb.png" loading="lazy"></figure>
+<p>注册完就会有 Client ID 和 Client Secret</p>
+<figure data-type="image" tabindex="2"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_662effbd.png" alt="ThirdPartyImage_662effbd.png" loading="lazy"></figure>
+<h1 id="2-配置-_configyml">2 配置 <code>_config.yml</code></h1>
+<p>在 comments 那添加</p>
+<pre><code class="language-java">gitalk: true
+  gitalk_clientID: 'Client ID'
+  gitalk_Secret: 'Client Secret'
+  gitalk_repo: '用户名.github.io'
+  gitalk_owner: '用户名'
+  gitalk_admin: '用户名'
+  distractionFreeMode: true
+</code></pre>
+<p>是在 comments 下面那添加，不要搞错地方。</p>
+<figure data-type="image" tabindex="3"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_102159f7.png" alt="ThirdPartyImage_102159f7.png" loading="lazy"></figure>
+<h1 id="3-配置-posthtml">3 配置 <code>post.html</code></h1>
+<p>文件的位置在 <code>_layouts\post.html</code></p>
+<h2 id="30-在-html-这个标签下添加">3.0 在 <code>&lt;html&gt;</code> 这个标签下添加</h2>
+<p>在 <code>&lt;html&gt;</code> 这个标签下加上这两行</p>
+<pre><code class="language-java">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>就像这样</p>
+<figure data-type="image" tabindex="4"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_598bdd4b.png" alt="ThirdPartyImage_598bdd4b.png" loading="lazy"></figure>
+<h2 id="31-在-include-footerhtml-里添加">3.1 在 {% include footer.html %} 里添加</h2>
+<pre><code class="language-java">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>如图所示，位置不要搞错</p>
+<figure data-type="image" tabindex="5"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_1ad409dc.png" alt="ThirdPartyImage_1ad409dc.png" loading="lazy"></figure>
+<h2 id="32-在-if-sitecommentsdisqus-后面添加">3.2 在 {% if site.comments.disqus %} 后面添加</h2>
+<pre><code class="language-java">{% if site.comments.gitalk %}
+    &lt;script&gt;
+        var gitalk = new Gitalk({
+              clientID: '{{ site.comments.gitalk_clientID }}',
+              clientSecret: '{{ site.comments.gitalk_Secret }}',
+              repo: '{{ site.comments.gitalk_repo }}',
+              owner: '{{ site.comments.gitalk_owner }}',
+              admin: '{{ site.comments.gitalk_admin }}',
+              id: location.pathname,      // Ensure uniqueness and length less than 50{{ page.title }}
+              distractionFreeMode: '{{ site.comments.distractionFreeMode }}'  // Facebook-like distraction free mode
+            })
+
+            gitalk.render('disqus_thread')
+    &lt;/script&gt;
+  {% endif %}
+</code></pre>
+<p>如图所示</p>
+<figure data-type="image" tabindex="6"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_2e17d074.png" alt="ThirdPartyImage_2e17d074.png" loading="lazy"></figure>
+<p>关于 <code>post.html</code> 这部分的修改可以看一下我的<a href="https://github.com/weijunzii/weijunzii.github.io/commit/0ba47d4b3b437d73f7079bb9efba181f172520d7">修改</a></p>
+<p>保存修改，再提交。</p>
+<h1 id="4-开-issues">4 开 issues</h1>
+<p>进入博客，点击设置</p>
+<figure data-type="image" tabindex="7"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_e9f5fe42.png" alt="ThirdPartyImage_e9f5fe42.png" loading="lazy"></figure>
+<p>进去后勾选一下 issues 就搞定了。</p>
+<figure data-type="image" tabindex="8"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_a7906bd4.png" alt="ThirdPartyImage_a7906bd4.png" loading="lazy"></figure>
+<p>再去看一下你博客里面的文章，如果说出现了评论框，那就是成功了。</p>
+<figure data-type="image" tabindex="9"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_c8371a65.png" alt="ThirdPartyImage_c8371a65.png" loading="lazy"></figure>
+<h1 id="5-相关说明">5 相关说明</h1>
+<p>参考了这篇文章才实现的：<a href="https://tea9.github.io/2018/06/24/gitali_config.html">https://tea9.github.io/2018/06/24/gitali_config.html</a></p>
+<p>文章作者写的说明：<a href="http://note.youdao.com/publicshare/?id=6ea132ba501b49b2928125a694cc9ad9#/">http://note.youdao.com/publicshare/?id=6ea132ba501b49b2928125a694cc9ad9#/</a></p>
+<p>使用的主题是：<a href="https://github.com/kaeyleo/jekyll-theme-H2O/">jekyll-theme-H2O</a></p>
+<p>感谢两位作者~~</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/">
+              <h3 class="post-title">
+                下一篇：如何拥有多个GitHub Pages
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '3911bd8dbdeee631dbc3',
+        clientSecret: '254c9e3f58b4a0441d0ca7e338fe9eb43d5a181c',
+        repo: 'gitalk.github.io',
+        owner: 'pping',
+        admin: ['pping'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
