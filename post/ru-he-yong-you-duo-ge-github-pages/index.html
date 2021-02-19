@@ -1,22 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://pping.github.io</id>
-    <title>aymar.cn</title>
-    <updated>2021-02-19T07:35:45.600Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://pping.github.io"/>
-    <link rel="self" href="https://pping.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://pping.github.io/images/avatar.png</logo>
-    <icon>https://pping.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, aymar.cn</rights>
-    <entry>
-        <title type="html"><![CDATA[如何拥有多个GitHub Pages]]></title>
-        <id>https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/</id>
-        <link href="https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/">
-        </link>
-        <updated>2021-02-19T07:35:26.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="场景再现">场景再现</h2>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>如何拥有多个GitHub Pages | aymar.cn</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613720142059">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://pping.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://pping.github.io">
+        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613720142059" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://pping.github.io">
+        <h1 class="site-title">aymar.cn</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">如何拥有多个GitHub Pages</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-19</span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="场景再现">场景再现</h2>
 <p>搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然也有人不介意放在一起）。</p>
 <p>但是我以前一直以为，每个GitHub账户只能拥有一个GitHub Pages页面，所以这个想法一直没有实施。后来发现其实不是这样的。正确的说法是这样的——我们只能为每个 GitHub 帐户创建一个用户或组织站点；而项目站点没有限制。</p>
 <p>我所认为的只能拥有一个的，是个人站点，也就是名为 <code>&lt;user&gt;.github.io</code> 的仓库。想要创建更多的GitHub Pages页面，可以通过创建项目站点实现。项目站点的数量没有限制。</p>
@@ -88,81 +158,58 @@
 <p>上图为新的 DNS 配置，前文的 He 的 DNS 服务不再使用。</p>
 <p>于是在这个过程中，我把 DNS 服务商也换了，然后发现 CloudFlare 比之前用的 [Hurricane Electric][] 好用多了，而且还提供很多其他免费功能，我觉得 Google Analytics 也可以被这个替代了。</p>
 <p>如果你觉得本文对你有帮助，请点赞收藏~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Github Pages + Jekyll搭建博客之SEO]]></title>
-        <id>https://pping.github.io/post/test/</id>
-        <link href="https://pping.github.io/post/test/">
-        </link>
-        <updated>2021-02-19T06:10:16.000Z</updated>
-        <content type="html"><![CDATA[<p>sunchy2008 2015-02-21 19:45:50  1340  收藏<br>
-参考:</p>
-<p>http://zyzhang.github.io/blog/2012/09/03/blog-with-github-pages-and-jekyll-seo/<br>
-对我自己的博客而言，有些内容仅仅是自娱自乐，有没有人看不重要；而有的内容我希望能分享出去被更多的人看到，比如nHibernate Mapping By Code的一系列文章， 都是项目中实际总结出来的，那时候nHibernate刚刚增加Mapping By Code的方式，官方文档内容几乎没有，google搜索很少能找到精确的结果。所以，如果这些文章能 被更广泛的传播会帮助更多的人。</p>
-<p>在用Github Pages + Jekyll搭建博客的过程中， 学到了不少SEO（Search Engine Optimization）的知识，比如如何让博客被搜索引擎收录，需要注意哪些以提高排名等等。于是，便有了下面几条简单的总结。</p>
-<p>让搜索引擎收录<br>
-如果没有任何超链接指向你的站点，在internet这个浩大的有向图中，站点就成了孤岛，不可能被搜索引擎收录。所以尽一切可能在其他网站上引用你的站点，比如友情链接， 或者在原博客上添加新博客的超链接。</p>
-<p>Google Webmasters - Google站长工具和百度站长工具都提供了提交sitemap， 提交网站URL要求搜索引擎收录，索引状态查询等功能</p>
-<p>为每个页面添加描述性的信息<br>
-在<head>标签中包含描述性强的title</p>
-<title>Github Pages + Jekyll搭建博客之SEO</title>
-在<meta>标签中指定准确并且可读性强的描述(description)，它会在搜索结果中显示。
-<meta content="在用Github Pages + Jekyll搭建博客的过程中，学到了不少SEO（Search Engine Optimization）的知识，比如如何让博客被搜索引擎收录，如何提高排名等等。 于是，便有了下面几条简单的总结。" name="description">
-Jekyll-Bootstrap已经帮你做好这个了，只需在每个page和post的开头指定title和description就可以了:
----
-layout: post
-title: "Github Pages + Jekyll搭建博客之SEO"
-description: "在用Github Pages + Jekyll搭建博客的过程中，学到了不少SEO（Search Engine Optimization）的知识，比如如何让博客被搜索引擎收录，需要注意哪些以提高排名等等。于是，便有了下面几条简单的总结。"
-category: Tech
-tags: [Github Pages, Jekyll, SEO]
----
-关于Github Pages，Jekyll和Jekyll-Bootstrap， 请参考我的另一篇文章像极客一样写博客
-<p>多用内部链接<br>
-内部链接指的是同一个网站的内容页面之间的互相链接，比如下面引文中的“像极客一样写博客”。</p>
-<p>关于Github Pages，Jekyll和Jekyll-Bootstrap， 请参考我的另一篇文章像极客一样写博客</p>
-<p>相关性高的内部链接除了有助于提高用户体验外，还有助于提高搜索引擎的索引效率，控制站内权重分布，并提升网站的收录率。 这个文章对内部链接总结的挺好。</p>
-<p>避免死链接<br>
-死链接即无效链接，不仅用户体验不好，还会降低网站在搜索引擎中的权重。</p>
-<p>Jekyll-Bootstrap默认的permalink就是一个造成死链接的隐患：</p>
-<p>permalink: /:categories/:year/:month/:day/:title</p>
-<p>Jekyll会按照这个格式为每篇文章生成URL，例如：</p>
-<p>zyzhang.github.com/tech/2012/01/01/helloworld</p>
-<p>一旦你重新组织或修改了category，所有的内部链接都要修改，否则就成了死链接，另外，之前被搜索引擎收录的页面也全部失效了。</p>
-<p>所以，我把permalink修改成了：</p>
-<p>permalink: /blog/:year/:month/:day/:title</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://pping.github.io/post/hello-gridea/</id>
-        <link href="https://pping.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://pping.github.io/post/test/">
+              <h3 class="post-title">
+                下一篇：Github Pages + Jekyll搭建博客之SEO
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
