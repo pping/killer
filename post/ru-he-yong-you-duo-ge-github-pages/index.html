@@ -1,95 +1,98 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>如何拥有多个GitHub Pages | aymar.cn</title>
-<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613728099033">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613797760556">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="如何拥有多个GitHub Pages | aymar.cn - Atom Feed" href="https://pping.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-    <meta name="description" content="场景再现
-搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://pping.github.io">
-  <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613728099033" alt="">
-  </a>
-  <h1 class="site-title">
-    aymar.cn
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://pping.github.io">
+        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613797760556" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://pping.github.io">
+        <h1 class="site-title">aymar.cn</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              如何拥有多个GitHub Pages
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-02-19
-              </span>
-              <span>
-                9 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">如何拥有多个GitHub Pages</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-19</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="场景再现">场景再现</h2>
+          </div>
+          <div class="post-content">
+            <h2 id="场景再现">场景再现</h2>
 <p>搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然也有人不介意放在一起）。</p>
 <p>但是我以前一直以为，每个GitHub账户只能拥有一个GitHub Pages页面，所以这个想法一直没有实施。后来发现其实不是这样的。正确的说法是这样的——我们只能为每个 GitHub 帐户创建一个用户或组织站点；而项目站点没有限制。</p>
 <p>我所认为的只能拥有一个的，是个人站点，也就是名为 <code>&lt;user&gt;.github.io</code> 的仓库。想要创建更多的GitHub Pages页面，可以通过创建项目站点实现。项目站点的数量没有限制。</p>
@@ -162,113 +165,86 @@
 <p>于是在这个过程中，我把 DNS 服务商也换了，然后发现 CloudFlare 比之前用的 [Hurricane Electric][] 好用多了，而且还提供很多其他免费功能，我觉得 Google Analytics 也可以被这个替代了。</p>
 <p>如果你觉得本文对你有帮助，请点赞收藏~</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%9C%BA%E6%99%AF%E5%86%8D%E7%8E%B0">场景再现</a></li>
-<li><a href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE">创建项目</a></li>
-<li><a href="#%E7%BB%91%E5%AE%9A%E5%AD%90%E5%9F%9F%E5%90%8D">绑定子域名</a></li>
-<li><a href="#%E4%BB%8E%E6%A8%A1%E6%9D%BF%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">从模板快速开始</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF-https">如何开启 https</a></li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://pping.github.io/post/test/">
+            <a class="purple-link" href="https://pping.github.io/post/test/">
               <h3 class="post-title">
-                Github Pages + Jekyll搭建博客之SEO
+                下一篇：Github Pages + Jekyll搭建博客之SEO
               </h3>
             </a>
           </div>
-        
-
-        
           
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      </div>
 
-<div id="gitalk-container"></div>
+      
+        
+          <div id="gitalk-container"></div>
+        
 
-<script>
+        
+      
 
-  var gitalk = new Gitalk({
-    clientID: '3911bd8dbdeee631dbc3',
-    clientSecret: '254c9e3f58b4a0441d0ca7e338fe9eb43d5a181c',
-    repo: 'gitalk',
-    owner: 'pping',
-    admin: ['pping'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
-  gitalk.render('gitalk-container')
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-          
 
-          
-        
 
-        <div class="site-footer">
-  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a>
-  <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
-    </div>
-
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-      hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+      var gitalk = new Gitalk({
+        clientID: '3911bd8dbdeee631dbc3',
+        clientSecret: '254c9e3f58b4a0441d0ca7e338fe9eb43d5a181c',
+        repo: 'gitalk',
+        owner: 'pping',
+        admin: ['pping'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
-
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
+      gitalk.render('gitalk-container')
 
     </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
