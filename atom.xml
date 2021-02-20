@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-20T08:21:31.344Z</updated>
+    <updated>2021-02-20T08:48:58.552Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -19,7 +19,7 @@
         <content type="html"><![CDATA[<h3 id="方法1">方法1</h3>
 <p><a href="https://blog.aymar.cn" target="_blank">vim aria.sh</a></p>
 <pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;ta&quot;`
+tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
 #echo $tracker
 aria2c $* --bt-tracker=$tracker
 </code></pre>

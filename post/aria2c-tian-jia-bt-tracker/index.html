@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613809278986">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613810932275">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pping.github.io">
-        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613809278986" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613810932275" alt="" width="32px" height="32px">
       </a>
       <a href="https://pping.github.io">
         <h1 class="site-title">aymar.cn</h1>
@@ -95,7 +95,7 @@
             <h3 id="方法1">方法1</h3>
 <p><a href="https://blog.aymar.cn" target="_blank">vim aria.sh</a></p>
 <pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;ta&quot;`
+tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
 #echo $tracker
 aria2c $* --bt-tracker=$tracker
 </code></pre>
