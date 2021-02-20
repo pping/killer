@@ -5,14 +5,14 @@
     
 <meta charset="utf-8" >
 
-<title>aria2c 添加bt-tracker | aymar.cn</title>
+<title>aria2c 添加 BT-Tracker | aymar.cn</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613813072170">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1613813549995">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pping.github.io">
-        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613813072170" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1613813549995" alt="" width="32px" height="32px">
       </a>
       <a href="https://pping.github.io">
         <h1 class="site-title">aymar.cn</h1>
@@ -80,31 +80,29 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">aria2c 添加bt-tracker</h2>
+          <h2 class="post-title">aria2c 添加 BT-Tracker</h2>
           <div class="post-info post-detail-info">
             <span><i class="icon-calendar-outline"></i> 2021-02-20</span>
             
           </div>
           <div class="post-content">
-            <h3 id="方法1">方法1</h3>
-<p><a href="https://blog.aymar.cn" target="_blank">vim aria.sh</a></p>
+            <p><a href="https://blog.aymar.cn">vim aria.sh</a></p>
 <pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
+tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;ta&quot;`
 #echo $tracker
 aria2c $* --bt-tracker=$tracker
 </code></pre>
-<p>chmod +x aria.sh</p>
-<p>./aria.sh <bt-Link></p>
-<p>../aria.sh -x 16 -s 10 -c -d ./  &quot;magnet:?=duiqwhoqwej01923”</p>
+<p><code>chmod +x aria.sh</code></p>
+<p>Usage: <code>./aria.sh</code> [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/whoisthis/">
+            <a class="purple-link" href="https://pping.github.io/post/zai-ge-ren-bo-ke-li-tian-jia-ping-lun-xi-tong-gitalk/">
               <h3 class="post-title">
-                下一篇：whoisthis
+                下一篇：在个人博客里添加评论系统--Gitalk
               </h3>
             </a>
           </div>
