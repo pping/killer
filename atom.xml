@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-22T08:09:37.099Z</updated>
+    <updated>2021-02-22T08:30:00.412Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -41,8 +41,8 @@ BabelLanguagePack-tools.gef-zh_4.18.0.v20201226020001.zip (4.92%)<br>
 BabelLanguagePack-tools.tracecompass-zh_4.18.0.v20201226020001.zip (20.66%)<br>
 BabelLanguagePack-webtools-zh_4.18.0.v20201226020001.zip (68.24%)</p>
 <h1 id="步骤二-解压">步骤二、解压</h1>
-<p><img src="https://pping.github.io/post-images/1613981027305.jpg" alt="" loading="lazy"><br>
-<code>解压覆盖</code>安装并重新打开eclipse。</p>
+<p><img src="https://pping.github.io/post-images/1613982551563.jpg" alt="" loading="lazy"><br>
+将features和plugins解压到<code>dropins</code>目录，并重新打开eclipse。</p>
 ]]></content>
     </entry>
     <entry>
