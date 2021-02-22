@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>aria2c 添加 BT-Tracker | aymar.cn</title>
+<title>eclipse 官方中文语言包安装步骤 | aymar.cn</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,29 +86,48 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">aria2c 添加 BT-Tracker</h2>
+          <h2 class="post-title">eclipse 官方中文语言包安装步骤</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-20</span>
+            <span><i class="icon-calendar-outline"></i> 2021-02-22</span>
             
           </div>
           <div class="post-content">
-            <p><a href="https://blog.aymar.cn">vim aria.sh</a></p>
-<pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
-#echo $tracker
-aria2c $* --bt-tracker=$tracker
-</code></pre>
-<p><code>chmod +x aria.sh</code></p>
-<p>Usage: <code>./aria.sh</code> [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...</p>
+            <h1 id="步骤一-下载">步骤一、下载</h1>
+<p>下载链接 <a href="https://www.eclipse.org/babel/downloads.php">https://www.eclipse.org/babel/downloads.php</a><br>
+<img src="https://pping.github.io/post-images/1613980434351.jpg" alt="" loading="lazy"><br>
+Language: Chinese (Simplified)<br>
+BabelLanguagePack-datatools-zh_4.18.0.v20201226020001.zip (75.88%)<br>
+<a href="http://www.eclipse.org/downloads/download.php?file=/technology/babel/babel_language_packs/R0.18.2/2020-12/BabelLanguagePack-eclipse-zh_4.18.0.v20201226020001.zip">BabelLanguagePack-eclipse-zh_4.18.0.v20201226020001.zip (83.92%)</a><br>
+BabelLanguagePack-modeling.emf-zh_4.18.0.v20201226020001.zip (58.66%)<br>
+BabelLanguagePack-modeling.mdt.bpmn2-zh_4.18.0.v20201226020001.zip (30.66%)<br>
+BabelLanguagePack-modeling.tmf.xtext-zh_4.18.0.v20201226020001.zip (56.38%)<br>
+BabelLanguagePack-mylyn-zh_4.18.0.v20201226020001.zip (45.49%)<br>
+BabelLanguagePack-rt.rap-zh_4.18.0.v20201226020001.zip (89.22%)<br>
+BabelLanguagePack-soa.bpmn2-modeler-zh_4.18.0.v20201226020001.zip (20.25%)<br>
+BabelLanguagePack-technology.egit-zh_4.18.0.v20201226020001.zip (21.03%)<br>
+BabelLanguagePack-technology.handly-zh_4.18.0.v20201226020001.zip (67.44%)<br>
+BabelLanguagePack-technology.jgit-zh_4.18.0.v20201226020001.zip (3.82%)<br>
+BabelLanguagePack-technology.lsp4e-zh_4.18.0.v20201226020001.zip (40.54%)<br>
+BabelLanguagePack-technology.packaging-zh_4.18.0.v20201226020001.zip (22.4%)<br>
+BabelLanguagePack-technology.packaging.mpc-zh_4.18.0.v20201226020001.zip (9.59%)<br>
+BabelLanguagePack-technology.passage-zh_4.18.0.v20201226020001.zip (19.35%)<br>
+BabelLanguagePack-technology.tm4e-zh_4.18.0.v20201226020001.zip (24.03%)<br>
+BabelLanguagePack-tools.cdt-zh_4.18.0.v20201226020001.zip (55.91%)<br>
+BabelLanguagePack-tools.gef-zh_4.18.0.v20201226020001.zip (4.92%)<br>
+BabelLanguagePack-tools.tracecompass-zh_4.18.0.v20201226020001.zip (20.66%)<br>
+BabelLanguagePack-webtools-zh_4.18.0.v20201226020001.zip (68.24%)</p>
+<h1 id="步骤二-解压">步骤二、解压</h1>
+<p><img src="https://pping.github.io/post-images/1613981027305.jpg" alt="" loading="lazy"><br>
+<code>解压覆盖</code>安装并重新打开eclipse。</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/zai-ge-ren-bo-ke-li-tian-jia-ping-lun-xi-tong-gitalk/">
+            <a class="purple-link" href="https://pping.github.io/post/aria2c-tian-jia-bt-tracker/">
               <h3 class="post-title">
-                下一篇：在个人博客里添加评论系统--Gitalk
+                下一篇：aria2c 添加 BT-Tracker
               </h3>
             </a>
           </div>
