@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-22T08:30:00.412Z</updated>
+    <updated>2021-02-22T08:48:06.638Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -43,6 +43,18 @@ BabelLanguagePack-webtools-zh_4.18.0.v20201226020001.zip (68.24%)</p>
 <h1 id="步骤二-解压">步骤二、解压</h1>
 <p><img src="https://pping.github.io/post-images/1613982551563.jpg" alt="" loading="lazy"><br>
 将features和plugins解压到<code>dropins</code>目录，并重新打开eclipse。</p>
+<h1 id="方法二">方法二：</h1>
+<p>安装语言包<br>
+通过“帮助”&gt;“安装新软件...”打开安装向导。<br>
+添加Babel p2存储库：https://download.eclipse.org/technology/babel/update-site/R0.18.2/2020-12/<br>
+选择/安装您选择的语言包<br>
+重新启动Eclipse，您应该获得翻译的Eclipse使用语言包<br>
+如果您的操作系统的系统语言环境已经是您要用来启动Eclipse的语言，那么您所要做的就是正常启动Eclipse，并且将加载语言包。</p>
+<p>如果系统语言环境为英语，并且您想以另一种语言启动Eclipse，则必须使用-nl命令行参数来启动Eclipse ：</p>
+<blockquote>
+<p>eclipse.exe -nl fr<br>
+用您要使用的语言环境替换fr。有关更多详细信息，请参见“运行Eclipse”。另请参阅“教您的Eclipse讲本地语言”的Eclipse Corner文章，以获取更多有关如何以不同的语言（包括双向语言，如阿拉伯语）和不同的操作系统（如Linux和Mac OS X）启动Eclipse的更多示例。</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
