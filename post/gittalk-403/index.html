@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>aymar.cn</title>
+<title>在授权gitalk后出现403错误 | aymar.cn</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -75,15 +83,60 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
+          <h2 class="post-title">在授权gitalk后出现403错误</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-23</span>
             
           </div>
+          <div class="post-content">
+            <p>编辑scripts.ejs，增加proxy。<br>
+路径：安装目录\Gridea\themes\主题名称\templates\includes\scripts.ejs</p>
+<pre><code>    &lt;script&gt;
+      var gitalk = new Gitalk({
+        clientID: '&lt;%= commentSetting.gitalkSetting.clientId %&gt;',
+        clientSecret: '&lt;%= commentSetting.gitalkSetting.clientSecret %&gt;',
+        repo: '&lt;%= commentSetting.gitalkSetting.repository %&gt;',
+        owner: '&lt;%= commentSetting.gitalkSetting.owner %&gt;',
+        admin: ['&lt;%= commentSetting.gitalkSetting.owner %&gt;'],
+        proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token', 
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
 
+      gitalk.render('gitalk-container')
+
+    &lt;/script&gt;
+</code></pre>
+<p>proxy自建：https://github.com/Zibri/cloudflare-cors-anywhere</p>
+<p>参考：<br>
+<a href="https://github.com/gitalk/gitalk/issues/429">https://github.com/gitalk/gitalk/issues/429</a></p>
+
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://pping.github.io/post/chinese/">
+              <h3 class="post-title">
+                下一篇：eclipse 官方中文语言包安装步骤
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -102,8 +155,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -118,7 +171,30 @@ var app = new Vue({
 
 
 
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
 
-    </div>
+      var gitalk = new Gitalk({
+        clientID: '3911bd8dbdeee631dbc3',
+        clientSecret: '1150000213d6c03dd456a2bed69cbd4cec206a7c',
+        repo: 'pping.github.io',
+        owner: 'pping',
+        admin: ['pping'],
+		proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token', 
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
