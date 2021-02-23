@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-23T03:06:06.299Z</updated>
+    <updated>2021-02-23T03:07:53.936Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -102,86 +102,6 @@ aria2c $* --bt-tracker=$tracker
 </code></pre>
 <p><code>chmod +x aria.sh</code></p>
 <p>Usage: <code>./aria.sh</code> [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何拥有多个GitHub Pages]]></title>
-        <id>https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/</id>
-        <link href="https://pping.github.io/post/ru-he-yong-you-duo-ge-github-pages/">
-        </link>
-        <updated>2021-02-19T07:35:26.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="场景再现">场景再现</h2>
-<p>搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然也有人不介意放在一起）。</p>
-<p>但是我以前一直以为，每个GitHub账户只能拥有一个GitHub Pages页面，所以这个想法一直没有实施。后来发现其实不是这样的。正确的说法是这样的——我们只能为每个 GitHub 帐户创建一个用户或组织站点；而项目站点没有限制。</p>
-<p>我所认为的只能拥有一个的，是个人站点，也就是名为 <code>&lt;user&gt;.github.io</code> 的仓库。想要创建更多的GitHub Pages页面，可以通过创建项目站点实现。项目站点的数量没有限制。</p>
-<p>[GitHub Pages 站点的类型][GitHub Pages]对此有清晰的说明，这里我把关键段落抄了过来：</p>
-<p>有三种类型的 GitHub Pages 站点：项目、用户和组织。 项目站点连接到 GitHub 上托管的特定项目。 用户和组织站点连接到特定的 GitHub 帐户。</p>
-<p>要发布用户站点，必须创建名为 <code>&lt;user&gt;.github.io</code> 的用户帐户所拥有的仓库。 要发布组织站点，必须创建名为 <code>&lt;organization&gt;.github.io</code> 的组织所拥有的仓库。 除非您使用自定义域，否则用户和组织站点位于 <code>http(s)://&lt;username&gt;.github.io</code> 或 <code>http(s)://&lt;organization&gt;.github.io</code>。</p>
-<p>项目站点的源文件与其项目存储在同一个仓库中。 除非您使用自定义域，否则项目站点位于 <code>http(s)://&lt;user&gt;.github.io/&lt;repository&gt;</code> 或 <code>http(s)://&lt;organization&gt;.github.io/&lt;repository&gt;</code>。</p>
-<p>您只能为每个 GitHub 帐户创建一个用户或组织站点。 项目站点（无论是组织还是用户帐户拥有）没有限制。</p>
-<h2 id="创建项目">创建项目</h2>
-<ol>
-<li>新建一个仓库，名称随意。</li>
-<li>进入仓库主页，点击右面的<code>Settings</code>，找到GitHub Pages部分，选择<code>Launch automatic page generator</code>&gt;<code>Continue to layouts</code>&gt;<code>Publish page</code>即可。（注意这里需要选择一个主题，之后可以再改，不选择的话页面可能会无法加载，显示<code>“There isn't a GitHub Pages site here.”</code>）</li>
-<li>建议勾选 <code>Enforce HTTPS</code>，否则访问时会出现安全警告。</li>
-<li>没有出错的话，一个项目主页就建立完成了，可以通过<code>&lt;username&gt;.github.io/&lt;projectname&gt;</code>访问到了</li>
-</ol>
-<p>这里我新建的项目为<code>mikelyou.github.io/acg</code>。可以看到这个地址有点丑，而且地址对大小写敏感。我希望通过<code>acg.mikelyou.com</code> 这样更加美观的地址访问，那么就需要设置和绑定子域名。</p>
-<h2 id="绑定子域名">绑定子域名</h2>
-<p>通常，当我们购买一个域名后，就可以使用它的子域名。子域名的数量、子域名长度的限制各个域名商会有所不同，我所使用的 Godaddy 每个域名可以添加最多 100 个子域名，每个子域名最长可达 25 个字符。还可以添加多层子域名， 例如，可以添加 info.blog.coolexample.com 以深入网站中更加具体的兴趣区域。总之就是根本用不完。</p>
-<p>以我为例，我的域名为<code>mikelyou.com</code>，我希望使用<code>acg.mikelyou.com</code> 这个子域名。</p>
-<ol>
-<li>在项目仓库里新建一个<code>CNAME</code>文件，并将不带协议名的裸域名写进去（<code>acg.mikelyou.com</code>而不是<code>https://acg.mikelyou.com/</code>）</li>
-<li>去DNS服务商的网站，给对应的二级域名添加<code>CNAME</code>解析到<code>&lt;username&gt;.github.io</code>（和个人主页的相同）<br>
-我的DNS服务商不是 Godaddy 而是是没见有人提的 Hurricane Electric，下面放了一张截图供各位参考。有文章使用的方法是添加<code>A</code>记录，不过我只看到一篇文章这么做，最好还是不要用，不成功的话检查一下其他步骤有没有错</li>
-<li>等待DNS生效，具体时间和服务商有关（十几分钟到几小时都有可能，清除浏览器缓存有时会有奇效）。</li>
-<li>成功后，可以通过更好看的 <code>acg.mikelyou.com</code> 地址访问到了项目站点了。</li>
-</ol>
-<p>[图片上传失败...(image-b84b7a-1597419735639)]</p>
-<h2 id="从模板快速开始">从模板快速开始</h2>
-<p>成功建立项目站点后，我便去寻找新的主题了，心想着找个萌萌的二次元主题，谁知道......</p>
-<p>在网上用<code>anime</code> <code>acg</code> <code>二次元</code> <code>moe</code> <code>cartoon</code> 等多种关键词检索后，我只找到一两个相关的 <code>jekyll</code> 主题，你看看我都用到什么关键词了，网络上的二次元主题几乎等于没有啊。虽然我最后也没有使用它们，我决定在这里列举一下，有兴趣的读者可以去康康：</p>
-<ul>
-<li>[梦白的二次元主题][Link 2] [GitHub页面][GitHub]</li>
-<li>[WuK的主题][WuK] [GitHub页面][GitHub 1]</li>
-</ul>
-<p>没有用的主要原因是，发现需要安装新的依赖，和我之前用的模板差别很大。所以我在想不如直接用现在的博客作为模板，从模板创建一个新的仓库好了，这样就省去了很多安装和使用上的麻烦，所有在现有博客上的习惯都可以套用到新的项目上。</p>
-<ol>
-<li>打开有的博客仓库，<code>Settings</code> →勾选 <code>Template repository</code></li>
-<li>回到仓库主界面，点击 <code>Use this template</code> 创建新的仓库，取名为<code>acg</code> ，建立站点时的仓库已经完成使命了可以删掉</li>
-<li>将仓库里的内容更换为新的博客的内容，使用和之前一样的方法更新博客。</li>
-</ol>
-<blockquote>
-<p>[从模板创建仓库][Link 3]类似于创建仓库的复刻，但存在一些重要差异：</p>
-<ul>
-<li>新的复刻包含父仓库的整个提交历史记录，而从模板创建的仓库从一个提交开始记录。</li>
-<li>对复刻的提交不会显示在您的贡献图中，而对从模板创建的仓库的提交会显示在您的贡献图中。</li>
-<li>复刻可能是向现有项目贡献代码的临时方式，而从模板创建的仓库可以快速启动新项目。</li>
-</ul>
-</blockquote>
-<h2 id="如何开启-https">如何开启 https</h2>
-<blockquote>
-<p>本段内容参考了 [这篇文章][Link 4]。</p>
-</blockquote>
-<p>建立<code>acg.mikelyou.com</code> 站点后，我把之前的博客地址修改为 <code>blog.mikelyou.com</code> ，使得他们放在一起比较和谐。不过随后我注意到一个问题——我的两个博客 <code>blog.mikelyou.com</code> 和 <code>acg.mikelyou.com</code> 无法同时开启 <code>https</code>，其中有一个站点会被 Chrome 提示 <code>“链接是不安全的”</code> 。我很快找到了原因，是GitHub Pages本身的限制。上面提到的这篇文章，我只把相关的内容在这里简述一下，如果有不清楚的地方请去看原文。</p>
-<p>首先，为什么要使用 https 协议？因为 https 协议提高网站访问安全性、目前越来越多的浏览器会判断当前站点支不支持https协议。</p>
-<p>默认情况下使用GitHub Pages的给定域名则支持http和https两种协议，但是如果使用自定义域名的话，则只能通过<code>http://</code>访问，也就是说我们在<code>Github上搭建 Hexo 或Jekyll 主题博客</code>后，通过<code>CNAME</code>绑定个人域名后，我们只能通过<code>http://</code>域名来访问。如果访问<code>https://XXX.github.io/</code>(即原来的GitHub Pages域名)将会被重定向到<code>我们的自定义域名</code>。但若直接访问<code>https://我们的自定义域名</code>，浏览器会报<code>SSL_DOMAIN_NOT_MATCHED</code>警告。</p>
-<p>那么怎么给自己的域名加上<code>https</code>呢？这篇文章的作者使用了 [CloudFlare][] 的<code>免费的https服务</code>。</p>
-<p>[CloudFlare][] 是一家CDN提供商，它提供了<code>免费的https服务</code>(但不是应用SSL证书)。实现模式就是，用户到CDN服务器的连接为<code>https</code>，而CDN服务器到GithubPage服务器的连接为<code>http</code>，就是在CDN服务器那里加上反向代理。</p>
-<ol>
-<li>注册并登录CloudFlare，并将自己域名下的<code>name server</code>修改为CloudFlare的<code>name server</code>。</li>
-<li>在CloudFlare的DNS设置域名匹配到自己的GithubPage(启用动态DNS加速)。</li>
-<li>在CloudFlare的<code>Crypto</code>设置SSL为<code>Flexible</code>(等待一定时间实现建立连接后，就可以通过<code>https</code>来访问自己的 GithubPage )。</li>
-<li>在CloudFlare的<code>Page Rules</code>中设置路由规则。一般情况下，利用<code>Always use https</code>设置规则，规则链接为<code>http://域名/*</code> , 这样就可以把 <code>http</code> 链接强制转换为 <code>https</code>。</li>
-</ol>
-<p>[站外图片上传中...(image-4b419a-1597419735640)]</p>
-<blockquote>
-<p>上面第一条规则是因为我的 <code>blog</code> 站点原本使用的地址是 <code>mikelyou.com</code> 根域名，添加这条规则可以让原来的地址依然可以访问，直接跳转到新的博客地址。（一共三个免费规则正好被我用完）</p>
-</blockquote>
-<p>[站外图片上传中...(image-50d749-1597419735640)]</p>
-<p>上图为新的 DNS 配置，前文的 He 的 DNS 服务不再使用。</p>
-<p>于是在这个过程中，我把 DNS 服务商也换了，然后发现 CloudFlare 比之前用的 [Hurricane Electric][] 好用多了，而且还提供很多其他免费功能，我觉得 Google Analytics 也可以被这个替代了。</p>
-<p>如果你觉得本文对你有帮助，请点赞收藏~</p>
 ]]></content>
     </entry>
     <entry>
