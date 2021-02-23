@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-22T08:55:59.001Z</updated>
+    <updated>2021-02-23T00:39:45.111Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://pping.github.io/images/avatar.png</logo>
     <icon>https://pping.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, aymar.cn</rights>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>https://pping.github.io/post/test1/</id>
+        <link href="https://pping.github.io/post/test1/">
+        </link>
+        <updated>2021-02-23T00:39:14.000Z</updated>
+        <content type="html"><![CDATA[<p>qweqwrqwr</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[eclipse 官方中文语言包安装步骤]]></title>
         <id>https://pping.github.io/post/chinese/</id>
