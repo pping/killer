@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-23T09:04:38.476Z</updated>
+    <updated>2021-02-23T09:13:37.865Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -43,7 +43,7 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 <pre><code>debug1: SSH2_MSG_SERVICE_ACCEPT received
 debug1: Authentications that can continue: publickey
 debug1: Next authentication method: publickey
-debug1: Trying private key: /home/Tree/.ssh/**id_rsa**
+debug1: Trying private key: /home/Tree/.ssh/id_rsa
 debug1: Authentications that can continue: publickey
 debug1: Trying private key: /home/Tree/.ssh/id_dsa
 debug1: Trying private key: /home/Tree/.ssh/id_ecdsa
@@ -58,7 +58,7 @@ git@github.com: Permission denied (publickey).
 1、修改私钥名称为默认：id_rsa<br>
 2、指定私钥名称</p>
 <pre><code class="language-Host"> HostName github.com
-**  IdentityFile ~/.ssh/id_rsa_github**
+ IdentityFile ~/.ssh/id_rsa_github
  User git
 </code></pre>
 ]]></content>
