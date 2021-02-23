@@ -1,19 +1,14 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>如何拥有多个GitHub Pages | aymar.cn</title>
-<meta name="description" content="&lt;meta name=&#34;description&#34; content=&#34;XX千万车主评选，XX网千万车主汽车评选，XX网千万车主年度车评选，汽车评选，XX网，评选，汽车&#34;&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1614048747275">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://pping.github.io/favicon.ico?v=1614049335567">
 <link rel="stylesheet" href="https://pping.github.io/styles/main.css">
 
 
@@ -24,75 +19,89 @@
   
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
+    <meta name="description" content="场景再现
+搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://pping.github.io">
-        <img class="avatar" src="https://pping.github.io/images/avatar.png?v=1614048747275" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://pping.github.io">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://pping.github.io">
+        <img src="https://pping.github.io/images/avatar.png?v=1614049335567" class="site-logo">
         <h1 class="site-title">aymar.cn</h1>
       </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/tags" class="menu purple-link">
+          <a href="/tags" class="site-nav">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
     </div>
   </div>
-</transition>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <meta name="description" content="linux windows shell mysql oracle route switch firewall python ">
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
 
 
-      <div class="content-container">
-        <div class="post-detail">
-          
-          <h2 class="post-title">如何拥有多个GitHub Pages</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-19</span>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">如何拥有多个GitHub Pages</h2>
+            <div class="post-date">2021-02-19</div>
             
-          </div>
-          <div class="post-content">
-            <h2 id="场景再现">场景再现</h2>
+            <div class="post-content" v-pre>
+              <h2 id="场景再现">场景再现</h2>
 <p>搭建了自己的第一个GitHub Pages页面后，可能很多人会有和我一样的想法——搭建多个GitHub Pages页面。这些新的页面可以作为博客页面的demo，也可以用来放一些不想放在主要博客的内容（比如ACG相关、日常生活，当然也有人不介意放在一起）。</p>
 <p>但是我以前一直以为，每个GitHub账户只能拥有一个GitHub Pages页面，所以这个想法一直没有实施。后来发现其实不是这样的。正确的说法是这样的——我们只能为每个 GitHub 帐户创建一个用户或组织站点；而项目站点没有限制。</p>
 <p>我所认为的只能拥有一个的，是个人站点，也就是名为 <code>&lt;user&gt;.github.io</code> 的仓库。想要创建更多的GitHub Pages页面，可以通过创建项目站点实现。项目站点的数量没有限制。</p>
@@ -165,51 +174,37 @@
 <p>于是在这个过程中，我把 DNS 服务商也换了，然后发现 CloudFlare 比之前用的 [Hurricane Electric][] 好用多了，而且还提供很多其他免费功能，我觉得 Google Analytics 也可以被这个替代了。</p>
 <p>如果你觉得本文对你有帮助，请点赞收藏~</p>
 
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://pping.github.io/post/seo/">
+                  <h3 class="post-title">
+                    Github Pages + Jekyll搭建博客之SEO
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
           </div>
+
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/seo/">
-              <h3 class="post-title">
-                下一篇：Github Pages + Jekyll搭建博客之SEO
-              </h3>
-            </a>
-          </div>
-          
       </div>
-
-      
-        
-          <div id="gitalk-container"></div>
-        
-
-        
-      
-
-      <div class="site-footer">
-  <div class="slogan"><meta name="description" content="XX千万车主评选，XX网千万车主汽车评选，XX网千万车主年度车评选，汽车评选，XX网，评选，汽车"></div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://blog.aymar.cn" target="_blank">aymar.cn</a> | <a class="rss" href="https://pping.github.io/atom.xml" target="_blank">RSS</a>
-</div>
-
-
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
 
 var app = new Vue({
   el: '#app',
@@ -219,6 +214,8 @@ var app = new Vue({
 })
 
 </script>
+
+
 
 
 
@@ -232,8 +229,8 @@ var app = new Vue({
         repo: 'pping.github.io',
         owner: 'pping',
         admin: ['pping'],
-		proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token', 
         id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+		proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token', 
         distractionFreeMode: false  // Facebook-like distraction free mode
       })
 
