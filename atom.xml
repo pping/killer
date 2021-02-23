@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-23T02:32:16.239Z</updated>
+    <updated>2021-02-23T02:34:01.395Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -17,7 +17,7 @@
         </link>
         <updated>2021-02-23T00:39:14.000Z</updated>
         <content type="html"><![CDATA[<p>gitalk Error: Request failed with status code 403    network error</p>
-<p>编辑scripts.ejs，增加proxy。<br>
+<p><strong>编辑scripts.ejs，增加proxy。</strong><br>
 路径：安装目录\Gridea\themes\主题名称\templates\includes\scripts.ejs</p>
 <pre><code class="language-js">    &lt;script&gt;
       var gitalk = new Gitalk({
