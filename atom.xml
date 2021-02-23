@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-23T03:08:07.128Z</updated>
+    <updated>2021-02-23T08:43:31.113Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -10,6 +10,94 @@
     <logo>https://pping.github.io/images/avatar.png</logo>
     <icon>https://pping.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, aymar.cn</rights>
+    <entry>
+        <title type="html"><![CDATA[git@github.com: Permission denied (publickey).]]></title>
+        <id>https://pping.github.io/post/gitgithubcom-permission-denied-publickey/</id>
+        <link href="https://pping.github.io/post/gitgithubcom-permission-denied-publickey/">
+        </link>
+        <updated>2021-02-23T08:37:43.000Z</updated>
+        <content type="html"><![CDATA[<p>ssh -T git@github.com</p>
+<pre><code class="language-shell">git config --global user.name &quot;usernme&quot;
+git config --global user.email &quot;emailName&quot;
+git init
+git add filename
+git commit -m &quot;first commit&quot;
+git remote add origin git@github.com:&lt;user&gt;/&lt;userrepo&gt;.git
+</code></pre>
+<p>ssh -v git@github.com</p>
+<pre><code>debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/Tree/.ssh/**id_rsa**
+debug1: Authentications that can continue: publickey
+debug1: Trying private key: /home/Tree/.ssh/id_dsa
+debug1: Trying private key: /home/Tree/.ssh/id_ecdsa
+debug1: Trying private key: /home/Tree/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/Tree/.ssh/id_ed25519
+debug1: Trying private key: /home/Tree/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/Tree/.ssh/id_xmss
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+</code></pre>
+<p>解决办法：<br>
+1、修改私钥名称为默认：id_rsa<br>
+2、指定私钥名称</p>
+<pre><code class="language-Host"> HostName github.com
+**  IdentityFile ~/.ssh/id_rsa_github**
+ User git
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pcman -Syu 升级失败]]></title>
+        <id>https://pping.github.io/post/pcman-syu-sheng-ji-shi-bai/</id>
+        <link href="https://pping.github.io/post/pcman-syu-sheng-ji-shi-bai/">
+        </link>
+        <updated>2021-02-23T06:55:13.000Z</updated>
+        <content type="html"><![CDATA[<p>msys2 failed retrieving file 'mingw64.db<br>
+msys2 failed retrieving file 'mingw32.db<br>
+无效或已损坏的数据库 (PGP 签名)</p>
+<p>解决方法:<br>
+pacman -U http://repo.msys2.org/msys/x86_64/msys2-keyring-1~20210213-1-any.pkg.tar.zst</p>
+<pre><code class="language-shell">$ pacman -U http://repo.msys2.org/msys/x86_64/msys2-keyring-1~20210213-1-any.pkg.tar.zst
+ msys2-keyring-1~20210213-1-any                            42.8 KiB  28.9 KiB/s 00:01 [#################################################] 100%
+ msys2-keyring-1~20210213-1-any.sig                       438.0   B  0.00   B/s 00:00 [#################################################] 100%
+loading packages...
+warning: msys2-keyring-1~20210213-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) msys2-keyring-1~20210213-1
+
+Total Installed Size:  0.05 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] y
+(1/1) checking keys in keyring                                                        [#################################################] 100%
+(1/1) checking package integrity                                                      [#################################################] 100%
+(1/1) loading package files                                                           [#################################################] 100%
+(1/1) checking for file conflicts                                                     [#################################################] 100%
+(1/1) checking available disk space                                                   [#################################################] 100%
+:: Processing package changes...
+(1/1) reinstalling msys2-keyring                                                      [#################################################] 100%
+==&gt; Appending keys from msys2.gpg...
+==&gt; Locally signing trusted keys in keyring...
+  -&gt; Locally signing key 123D4D51A1793859C2BE916BBBE514E53E0D0813...
+  -&gt; Locally signing key B91BCF3303284BF90CC043CA9F418C233E652008...
+  -&gt; Locally signing key 6E8FEAFF9644F54EED90EEA0790AE56A1D3CFDDC...
+  -&gt; Locally signing key 69985C5EB351011C78DF7F6D755B8182ACD22879...
+  -&gt; Locally signing key 9DD0D4217D75A33B896159E6DA7EF2ABAEEA755C...
+  -&gt; Locally signing key D55E7A6D7CE9BA1587C0ACACF40D263ECA25678A...
+==&gt; Importing owner trust values...
+==&gt; Disabling revoked keys in keyring...
+  -&gt; Disabling key B19514FB53EB3668471B296E794DCF97F93FC717...
+==&gt; Updating trust database...
+gpg: next trustdb check due at 2022-01-23
+
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在授权gitalk后出现403错误]]></title>
         <id>https://pping.github.io/post/gittalk-403/</id>

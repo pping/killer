@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>aria2c 添加 BT-Tracker | aymar.cn</title>
+<title>git@github.com: Permission denied (publickey). | aymar.cn</title>
 <meta name="description" content="&lt;meta name=&#34;description&#34; content=&#34;linux windows shell mysql oracle route switch firewall python &#34;&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,29 +86,51 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">aria2c 添加 BT-Tracker</h2>
+          <h2 class="post-title">git@github.com: Permission denied (publickey).</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-20</span>
+            <span><i class="icon-calendar-outline"></i> 2021-02-23</span>
             
           </div>
           <div class="post-content">
-            <p><a href="https://blog.aymar.cn">vim aria.sh</a></p>
-<pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
-#echo $tracker
-aria2c $* --bt-tracker=$tracker
+            <p>ssh -T git@github.com</p>
+<pre><code class="language-shell">git config --global user.name &quot;usernme&quot;
+git config --global user.email &quot;emailName&quot;
+git init
+git add filename
+git commit -m &quot;first commit&quot;
+git remote add origin git@github.com:&lt;user&gt;/&lt;userrepo&gt;.git
 </code></pre>
-<p><code>chmod +x aria.sh</code></p>
-<p>Usage: <code>./aria.sh</code> [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...</p>
+<p>ssh -v git@github.com</p>
+<pre><code>debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/Tree/.ssh/**id_rsa**
+debug1: Authentications that can continue: publickey
+debug1: Trying private key: /home/Tree/.ssh/id_dsa
+debug1: Trying private key: /home/Tree/.ssh/id_ecdsa
+debug1: Trying private key: /home/Tree/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/Tree/.ssh/id_ed25519
+debug1: Trying private key: /home/Tree/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/Tree/.ssh/id_xmss
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+</code></pre>
+<p>解决办法：<br>
+1、修改私钥名称为默认：id_rsa<br>
+2、指定私钥名称</p>
+<pre><code class="language-Host"> HostName github.com
+**  IdentityFile ~/.ssh/id_rsa_github**
+ User git
+</code></pre>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/about/">
+            <a class="purple-link" href="https://pping.github.io/post/pcman-syu-sheng-ji-shi-bai/">
               <h3 class="post-title">
-                下一篇：关于
+                下一篇：pcman -Syu 升级失败
               </h3>
             </a>
           </div>

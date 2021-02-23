@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>aria2c 添加 BT-Tracker | aymar.cn</title>
+<title>pcman -Syu 升级失败 | aymar.cn</title>
 <meta name="description" content="&lt;meta name=&#34;description&#34; content=&#34;linux windows shell mysql oracle route switch firewall python &#34;&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,29 +86,63 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">aria2c 添加 BT-Tracker</h2>
+          <h2 class="post-title">pcman -Syu 升级失败</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-20</span>
+            <span><i class="icon-calendar-outline"></i> 2021-02-23</span>
             
           </div>
           <div class="post-content">
-            <p><a href="https://blog.aymar.cn">vim aria.sh</a></p>
-<pre><code class="language-bash">#!/bin/bash
-tracker=`curl -s -k https://ngosang.github.io/trackerslist/trackers_best.txt  |awk NF|sed &quot;:a;N;s/\n/,/g;b a&quot;`
-#echo $tracker
-aria2c $* --bt-tracker=$tracker
+            <p>msys2 failed retrieving file 'mingw64.db<br>
+msys2 failed retrieving file 'mingw32.db<br>
+无效或已损坏的数据库 (PGP 签名)</p>
+<p>解决方法:<br>
+pacman -U http://repo.msys2.org/msys/x86_64/msys2-keyring-1~20210213-1-any.pkg.tar.zst</p>
+<pre><code class="language-shell">$ pacman -U http://repo.msys2.org/msys/x86_64/msys2-keyring-1~20210213-1-any.pkg.tar.zst
+ msys2-keyring-1~20210213-1-any                            42.8 KiB  28.9 KiB/s 00:01 [#################################################] 100%
+ msys2-keyring-1~20210213-1-any.sig                       438.0   B  0.00   B/s 00:00 [#################################################] 100%
+loading packages...
+warning: msys2-keyring-1~20210213-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) msys2-keyring-1~20210213-1
+
+Total Installed Size:  0.05 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] y
+(1/1) checking keys in keyring                                                        [#################################################] 100%
+(1/1) checking package integrity                                                      [#################################################] 100%
+(1/1) loading package files                                                           [#################################################] 100%
+(1/1) checking for file conflicts                                                     [#################################################] 100%
+(1/1) checking available disk space                                                   [#################################################] 100%
+:: Processing package changes...
+(1/1) reinstalling msys2-keyring                                                      [#################################################] 100%
+==&gt; Appending keys from msys2.gpg...
+==&gt; Locally signing trusted keys in keyring...
+  -&gt; Locally signing key 123D4D51A1793859C2BE916BBBE514E53E0D0813...
+  -&gt; Locally signing key B91BCF3303284BF90CC043CA9F418C233E652008...
+  -&gt; Locally signing key 6E8FEAFF9644F54EED90EEA0790AE56A1D3CFDDC...
+  -&gt; Locally signing key 69985C5EB351011C78DF7F6D755B8182ACD22879...
+  -&gt; Locally signing key 9DD0D4217D75A33B896159E6DA7EF2ABAEEA755C...
+  -&gt; Locally signing key D55E7A6D7CE9BA1587C0ACACF40D263ECA25678A...
+==&gt; Importing owner trust values...
+==&gt; Disabling revoked keys in keyring...
+  -&gt; Disabling key B19514FB53EB3668471B296E794DCF97F93FC717...
+==&gt; Updating trust database...
+gpg: next trustdb check due at 2022-01-23
+
+
 </code></pre>
-<p><code>chmod +x aria.sh</code></p>
-<p>Usage: <code>./aria.sh</code> [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...</p>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://pping.github.io/post/about/">
+            <a class="purple-link" href="https://pping.github.io/post/gittalk-403/">
               <h3 class="post-title">
-                下一篇：关于
+                下一篇：在授权gitalk后出现403错误
               </h3>
             </a>
           </div>
