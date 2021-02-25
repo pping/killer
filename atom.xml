@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pping.github.io</id>
     <title>aymar.cn</title>
-    <updated>2021-02-25T03:26:53.094Z</updated>
+    <updated>2021-02-25T08:37:44.170Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pping.github.io"/>
     <link rel="self" href="https://pping.github.io/atom.xml"/>
@@ -11,11 +11,11 @@
     <icon>https://pping.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, aymar.cn</rights>
     <entry>
-        <title type="html"><![CDATA[ 缩略语  | 英文                                         | 中文         ]]></title>
+        <title type="html"><![CDATA[缩略语 、术语表]]></title>
         <id>https://pping.github.io/post/Terms-definitions-abbreviations/</id>
         <link href="https://pping.github.io/post/Terms-definitions-abbreviations/">
         </link>
-        <updated>2021-02-25T03:22:53.000Z</updated>
+        <updated>2021-02-25T08:34:04.000Z</updated>
         <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -26,19 +26,94 @@
 </thead>
 <tbody>
 <tr>
+<td>ACL</td>
+<td>Access Control List</td>
+<td>访问控制列表</td>
+</tr>
+<tr>
+<td>AF</td>
+<td>Assured Forwarding</td>
+<td>确保转发</td>
+</tr>
+<tr>
+<td>AGCF</td>
+<td>Access Gateway Control Function</td>
+<td>接入网关控制功能</td>
+</tr>
+<tr>
+<td>AMBR</td>
+<td>Aggregate Maximum Bit Rate</td>
+<td>集合最大比特速率</td>
+</tr>
+<tr>
+<td>AMR</td>
+<td>Adaptive Multirate</td>
+<td>自适应多速率</td>
+</tr>
+<tr>
+<td>AMR-WB</td>
+<td>Adaptive Multi-Rate-Wideband</td>
+<td>宽带自适应多速率</td>
+</tr>
+<tr>
+<td>APN</td>
+<td>Access Point Name</td>
+<td>接入点名称</td>
+</tr>
+<tr>
+<td>APN-AMBR</td>
+<td>APN Aggregate Maximum Bit Rate</td>
+<td>集合最大比特速率</td>
+</tr>
+<tr>
+<td>ARP</td>
+<td>Allocation/Retention Priority</td>
+<td>分配保留优先级</td>
+</tr>
+<tr>
+<td>ARP</td>
+<td>Address Resolution Protocol</td>
+<td>地址解析协议</td>
+</tr>
+<tr>
 <td>AS</td>
 <td>Application Server</td>
 <td>应用服务器</td>
 </tr>
 <tr>
-<td>APN</td>
-<td>Access Point Name</td>
-<td>接入点名</td>
+<td>A-SBC</td>
+<td>Access Session Border Controller</td>
+<td>接入会话边界控制器</td>
+</tr>
+<tr>
+<td>ASCII</td>
+<td>American Standard Code for Information Interchange</td>
+<td>美国信息交换标准代码</td>
+</tr>
+<tr>
+<td>ATCF</td>
+<td>Access Transfer Control Function</td>
+<td>接入转发控制功能</td>
+</tr>
+<tr>
+<td>ATGW</td>
+<td>Access Transfer Gateway</td>
+<td>接入转发网关</td>
 </tr>
 <tr>
 <td>AUTN</td>
-<td>Authentication TokeN</td>
-<td>鉴权 TokeN</td>
+<td>Authentication Token</td>
+<td>认证令牌</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>Authorization Vector</td>
+<td>认证向量AV</td>
+</tr>
+<tr>
+<td>AVP</td>
+<td>Attribute-Value Pair</td>
+<td>属性值对</td>
 </tr>
 <tr>
 <td>B2BUA</td>
@@ -46,9 +121,74 @@
 <td>背靠背用户代理</td>
 </tr>
 <tr>
+<td>BAIC</td>
+<td>Barring of All Incoming Calls</td>
+<td>闭锁所有入呼叫</td>
+</tr>
+<tr>
+<td>BAOC</td>
+<td>Barring of All Outgoing Calls</td>
+<td>锁所有出呼叫</td>
+</tr>
+<tr>
+<td>BCSM</td>
+<td>Basic Call State Model</td>
+<td>基本呼叫状态模型</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>Best-Effort</td>
+<td>尽力而为业务</td>
+</tr>
+<tr>
+<td>BFD</td>
+<td>Bidirectional Forwarding Detection</td>
+<td>双向转发检测</td>
+</tr>
+<tr>
 <td>BGCF</td>
 <td>Breakout Gateway Control Function</td>
 <td>出口网关控制功能</td>
+</tr>
+<tr>
+<td>BICC</td>
+<td>Bearer Independent Call Control</td>
+<td>与承载无关的呼叫控制协议</td>
+</tr>
+<tr>
+<td>BIC-ROAM</td>
+<td>Barring of Incoming Calls When Roaming Outside Home PLMN Country</td>
+<td>漫游出归属国家时闭锁所有入呼</td>
+</tr>
+<tr>
+<td>BOIC</td>
+<td>Barring of All Outgoing International Calls</td>
+<td>禁止国际出局呼叫</td>
+</tr>
+<tr>
+<td>BOIC-exHC</td>
+<td>Barring of Outgoing International Calls except those directed to the Home PLMN Country</td>
+<td>闭锁除归属PLMN国家外所有国际出呼叫</td>
+</tr>
+<tr>
+<td>BSS</td>
+<td>Business Support System</td>
+<td>业务支撑系统</td>
+</tr>
+<tr>
+<td>CAMEL</td>
+<td>Customized Applications for Mobile network Enhanced Logic</td>
+<td>移动网增强逻辑的用户应用</td>
+</tr>
+<tr>
+<td>CAP</td>
+<td>Customized Applications for Mobile network Enhanced Logic Application Part</td>
+<td>CAME应用部分</td>
+</tr>
+<tr>
+<td>C-BGF</td>
+<td>Core Border Gateway Function</td>
+<td>核心边界网关功能</td>
 </tr>
 <tr>
 <td>CCF</td>
@@ -56,9 +196,39 @@
 <td>计费收集功能</td>
 </tr>
 <tr>
+<td>CCR</td>
+<td>Credit Control Request</td>
+<td>信用控制请求</td>
+</tr>
+<tr>
 <td>CDR</td>
-<td>Charging DataRecord</td>
-<td>计费数据记录</td>
+<td>Charging Data Record</td>
+<td>详细计费话单</td>
+</tr>
+<tr>
+<td>CFNR</td>
+<td>Call Forwarding on No Reply</td>
+<td>无应答呼叫前转</td>
+</tr>
+<tr>
+<td>CFNRc</td>
+<td>Call Forwarding on User Not Reachable</td>
+<td>不可及前转</td>
+</tr>
+<tr>
+<td>CFU</td>
+<td>Call Forwarding Unconditional</td>
+<td>无条件前转</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>Call Hold</td>
+<td>呼叫保持</td>
+</tr>
+<tr>
+<td>CIC</td>
+<td>Carrier Identification Code</td>
+<td>电路识别码</td>
 </tr>
 <tr>
 <td>CK</td>
@@ -66,9 +236,34 @@
 <td>加密密钥</td>
 </tr>
 <tr>
+<td>CLIR</td>
+<td>Calling Line Identification Restriction</td>
+<td>主叫线识别限制</td>
+</tr>
+<tr>
+<td>C-MSISDN</td>
+<td>Correlation Mobile Station international ISDN number</td>
+<td>相关性终端标示号码</td>
+</tr>
+<tr>
 <td>CN</td>
 <td>Core Network</td>
 <td>核心网</td>
+</tr>
+<tr>
+<td>COLP</td>
+<td>Connected Line Identification Presentation</td>
+<td>被叫线识别显示</td>
+</tr>
+<tr>
+<td>CORBA</td>
+<td>Common Object Request Broker Architecture</td>
+<td>公共对象请求代理结构</td>
+</tr>
+<tr>
+<td>CPE</td>
+<td>Customer Premise Equipment</td>
+<td>客户前置设备/用户驻地设备</td>
 </tr>
 <tr>
 <td>CS</td>
@@ -81,9 +276,39 @@
 <td>呼叫会话控制功能</td>
 </tr>
 <tr>
+<td>CSFB</td>
+<td>Circuit Switched Fallback</td>
+<td>电路域回落语音解决方案</td>
+</tr>
+<tr>
+<td>CSI</td>
+<td>CAMEL Subscription Information</td>
+<td>CAMEL签约信息</td>
+</tr>
+<tr>
+<td>CW</td>
+<td>Call Waiting</td>
+<td>呼叫等待</td>
+</tr>
+<tr>
 <td>DHCP</td>
 <td>Dynamic Host Configuration Protocol</td>
 <td>动态主机配置协议</td>
+</tr>
+<tr>
+<td>Diameter</td>
+<td>IETF（Internet Engineering Task Force）Authentication、Authorization、Accounting protol</td>
+<td>一种AAA协议</td>
+</tr>
+<tr>
+<td>DL TFT</td>
+<td>DownLink Traffic Flow Template</td>
+<td>下行链路业务流模板</td>
+</tr>
+<tr>
+<td>DMS</td>
+<td>Device Manager System</td>
+<td>设备管理服务器</td>
 </tr>
 <tr>
 <td>DNS</td>
@@ -91,9 +316,24 @@
 <td>域名系统</td>
 </tr>
 <tr>
+<td>DP</td>
+<td>Detection Point</td>
+<td>检出点</td>
+</tr>
+<tr>
+<td>DRA</td>
+<td>Diameter Router Agent Diameter</td>
+<td>路由代理</td>
+</tr>
+<tr>
 <td>DTD</td>
 <td>Document Type Definition</td>
 <td>文档类型定义</td>
+</tr>
+<tr>
+<td>Dual Radio</td>
+<td>Dual Radio mode</td>
+<td>单终端单卡双模双待</td>
 </tr>
 <tr>
 <td>ECF</td>
@@ -101,9 +341,84 @@
 <td>事件计费功能</td>
 </tr>
 <tr>
+<td>ECM</td>
+<td>EPS Connection Management</td>
+<td>EPS连接管理</td>
+</tr>
+<tr>
+<td>E-CSCF</td>
+<td>Emergency-Call Session Control Function</td>
+<td>紧急-呼叫会话控制功能</td>
+</tr>
+<tr>
+<td>ECT</td>
+<td>Explicit Call Transfer</td>
+<td>显式呼叫转移</td>
+</tr>
+<tr>
+<td>EF</td>
+<td>Expedited Forwarding</td>
+<td>加速转发</td>
+</tr>
+<tr>
+<td>EMS</td>
+<td>Enhanced Messaging Service</td>
+<td>增强型短消息业务</td>
+</tr>
+<tr>
+<td>ENS</td>
+<td>Enhanced Name Server</td>
+<td>增强名字服务器</td>
+</tr>
+<tr>
+<td>EPC</td>
+<td>Evolved Packet Core</td>
+<td>演进型分组核心网</td>
+</tr>
+<tr>
+<td>EPS</td>
+<td>Evolved Packet System</td>
+<td>演进的分组系统</td>
+</tr>
+<tr>
+<td>eSRVCC</td>
+<td>enhanced SRVCC</td>
+<td>增强单待语音连续</td>
+</tr>
+<tr>
+<td>E-STN-SR</td>
+<td>Emergency Session Transfer Number for Single Radio</td>
+<td>用于SRVCC的紧急会话转换号码</td>
+</tr>
+<tr>
+<td>ETSI</td>
+<td>European Telecommunications Standards Institute</td>
+<td>欧洲电信标准协会</td>
+</tr>
+<tr>
+<td>E-UTRAN</td>
+<td>Evolved Universal Terrestrial Radio Access Network</td>
+<td>演进型通用陆地无线接入网</td>
+</tr>
+<tr>
+<td>FMC</td>
+<td>Fixed Mobile Convergence</td>
+<td>固定网络与移动网络融合</td>
+</tr>
+<tr>
 <td>FQDN</td>
 <td>Fully Qualified Domain Name</td>
 <td>全资格域名</td>
+</tr>
+<tr>
+<td>GAA</td>
+<td>Generic Authentication Architecture</td>
+<td>通用认证架构</td>
+</tr>
+<tr>
+<td>GBR</td>
+<td>Guaranteed Bit Rate</td>
+<td>保证比特速率</td>
 </tr>
 <tr>
 <td>GCID</td>
@@ -111,9 +426,24 @@
 <td>GPRS 计费标识</td>
 </tr>
 <tr>
+<td>GERAN</td>
+<td>GSM EDGE Radio Access Network</td>
+<td>GSM/EDGE无线接入网</td>
+</tr>
+<tr>
 <td>GGSN</td>
 <td>Gateway GPRS Support Node</td>
 <td>网关 GPRS 支持节点</td>
+</tr>
+<tr>
+<td>GMLC</td>
+<td>Gateway Mobile Location Center</td>
+<td>网关移动定位中心</td>
+</tr>
+<tr>
+<td>GMSC</td>
+<td>Gateway Mobile Switching Center</td>
+<td>关口移动交换中心</td>
 </tr>
 <tr>
 <td>GPRS</td>
@@ -121,19 +451,84 @@
 <td>通用分组无线业务</td>
 </tr>
 <tr>
+<td>GTP</td>
+<td>GPRS Tunneling Protocol</td>
+<td>GPRS遂道协议</td>
+</tr>
+<tr>
+<td>GTP-C</td>
+<td>GPRS Tunneling Protocol-Control plane</td>
+<td>GPRS隧道协议控制面</td>
+</tr>
+<tr>
+<td>GTP-U</td>
+<td>GPRS Tunneling Protocol-User plane</td>
+<td>GPRS隧道协议用户面</td>
+</tr>
+<tr>
+<td>H.248</td>
+<td>ITU-T H.248/IETF MeGaCo Protocol</td>
+<td>一种媒体网关控制协议</td>
+</tr>
+<tr>
+<td>HLR</td>
+<td>Home Location Register</td>
+<td>归属位置寄存器</td>
+</tr>
+<tr>
+<td>HRPD</td>
+<td>High Rate Packet Data</td>
+<td>高速包数据网络</td>
+</tr>
+<tr>
 <td>HSS</td>
 <td>Home Subscriber Server</td>
 <td>归属用户服务器</td>
 </tr>
 <tr>
-<td>I-CSCF</td>
-<td>Interrogating-CSCF</td>
-<td>查询 -CSCF</td>
+<td>HTTP</td>
+<td>Hypertext Transfer Protocol</td>
+<td>超文本传输协议</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>HyperText Transfer Protocol Secure</td>
+<td>加密的超文本传输协议</td>
+</tr>
+<tr>
+<td>I-BGF</td>
+<td>Interconnection Border Gateway Function</td>
+<td>互通边界网关功能</td>
 </tr>
 <tr>
 <td>ICID</td>
-<td>IM CN subsystem Charging Identifier</td>
-<td>IMS 计费标识</td>
+<td>IMS Charging Identifier</td>
+<td>IMS计费标识符</td>
+</tr>
+<tr>
+<td>ICS</td>
+<td>IMS Centralized Services</td>
+<td>IMS集中服务</td>
+</tr>
+<tr>
+<td>I-CSCF</td>
+<td>Interrogating-Call Session Control Function</td>
+<td>查询-呼叫会话控制功能</td>
+</tr>
+<tr>
+<td>IETF</td>
+<td>Internet Engineering Task Force Internet</td>
+<td>工程任务组</td>
+</tr>
+<tr>
+<td>iFC</td>
+<td>Initial Filter Criteria</td>
+<td>初始过滤准则</td>
+</tr>
+<tr>
+<td>iGWB</td>
+<td>iGateWay Bill</td>
+<td>计费网关</td>
 </tr>
 <tr>
 <td>IK</td>
@@ -146,19 +541,29 @@
 <td>IP 多媒体</td>
 </tr>
 <tr>
+<td>IM-MGW</td>
+<td>IP multimedia media gateway</td>
+<td>IP多媒体网关</td>
+</tr>
+<tr>
 <td>IMPI</td>
-<td>IM Private Identity</td>
-<td>IP 多媒体 私有标示</td>
+<td>IP Multimedia Private Identity</td>
+<td>IP多媒体私有标识</td>
 </tr>
 <tr>
 <td>IMPU</td>
-<td>IM Public Identity</td>
-<td>IP 多媒体 公有标示</td>
+<td>IP multimedia public identity</td>
+<td>IP多媒体公共标识</td>
+</tr>
+<tr>
+<td>IMRN</td>
+<td>IMS Routing Number</td>
+<td>IMS路由号码</td>
 </tr>
 <tr>
 <td>IMS</td>
-<td>IP Multimedia Core Network Subsystem</td>
-<td>IP 多媒体网络子系统</td>
+<td>IP Multimedia Subsystem</td>
+<td>IP多媒体子系统</td>
 </tr>
 <tr>
 <td>IMS-ALG</td>
@@ -167,8 +572,23 @@
 </tr>
 <tr>
 <td>IMSI</td>
-<td>International  Mobile  Subscriber Identifier</td>
+<td>International Mobile Subscriber Identifier</td>
 <td>国际移动用户标识</td>
+</tr>
+<tr>
+<td>IM-SSF</td>
+<td>IP multimedia service switching function</td>
+<td>IP多媒体业务交换功能</td>
+</tr>
+<tr>
+<td>INAP</td>
+<td>Intelligent Network Application Protocol</td>
+<td>智能网应用规程</td>
+</tr>
+<tr>
+<td>INVITE</td>
+<td>INVITE</td>
+<td>INVITE消息</td>
 </tr>
 <tr>
 <td>IOI</td>
@@ -186,6 +606,16 @@
 <td>IP 安全</td>
 </tr>
 <tr>
+<td>IRS</td>
+<td>Implicitly Registered Set</td>
+<td>隐式注册集</td>
+</tr>
+<tr>
+<td>I-SBC</td>
+<td>Interconnection Session Border Controller</td>
+<td>互通会话边界控制器</td>
+</tr>
+<tr>
 <td>ISC</td>
 <td>IP multimedia Subsystem Service Control</td>
 <td>IMS 业务控制</td>
@@ -193,12 +623,62 @@
 <tr>
 <td>ISIM</td>
 <td>IMS SIM</td>
-<td>IMS  用户标识模块</td>
+<td>IMS 用户标识模块</td>
+</tr>
+<tr>
+<td>ISUP</td>
+<td>ISDN User Part</td>
+<td>ISDN（Integrated Services Digital Network）用户部分</td>
+</tr>
+<tr>
+<td>ITU-T</td>
+<td>International Telecommunication Union-Telecommunication Standardization Sector</td>
+<td>国际电联电信标准化部门</td>
+</tr>
+<tr>
+<td>IVR</td>
+<td>Interactive Voice Response</td>
+<td>交互式语音应答</td>
+</tr>
+<tr>
+<td>LRF</td>
+<td>Location Retrieval Function</td>
+<td>位置登记功能</td>
+</tr>
+<tr>
+<td>LTE</td>
+<td>Long Term Evolution</td>
+<td>长期演进</td>
+</tr>
+<tr>
+<td>LTE-A</td>
+<td>LTE-Advanced</td>
+<td>LTE进化</td>
 </tr>
 <tr>
 <td>MAC</td>
 <td>Message Authentication Code</td>
 <td>消息验证码</td>
+</tr>
+<tr>
+<td>mAGCF</td>
+<td>Mobile Access Gateway Control Function</td>
+<td>移动接入网关控制功能</td>
+</tr>
+<tr>
+<td>MAP</td>
+<td>Mobile Application Part</td>
+<td>移动应用部分</td>
+</tr>
+<tr>
+<td>MAR</td>
+<td>Multimedia Authorization Request</td>
+<td>多媒体授权请求</td>
+</tr>
+<tr>
+<td>MBR</td>
+<td>Maximum Bit Rate</td>
+<td>最大比特速率</td>
 </tr>
 <tr>
 <td>MCC</td>
@@ -211,14 +691,54 @@
 <td>媒体网关控制功能</td>
 </tr>
 <tr>
+<td>MGCP</td>
+<td>Media Gateway Control Protocol</td>
+<td>媒体网关控制协议</td>
+</tr>
+<tr>
 <td>MGW</td>
 <td>Media Gateway</td>
 <td>媒体网关</td>
 </tr>
 <tr>
+<td>MME</td>
+<td>Mobility Management Entity</td>
+<td>移动性管理实体</td>
+</tr>
+<tr>
+<td>MML</td>
+<td>Man-Machine Language</td>
+<td>人机语言</td>
+</tr>
+<tr>
+<td>MMTel AS</td>
+<td>Multimedia Telephony Application Server</td>
+<td>MMTel应用服务器</td>
+</tr>
+<tr>
 <td>MNC</td>
 <td>Mobile Network Code</td>
 <td>移动网码</td>
+</tr>
+<tr>
+<td>MNO</td>
+<td>Mobile Network Operator</td>
+<td>移动网络运营商</td>
+</tr>
+<tr>
+<td>MOCN</td>
+<td>Multi-Operator Core Network</td>
+<td>多运营商共享网络</td>
+</tr>
+<tr>
+<td>MPS</td>
+<td>Multimedia Priority Service</td>
+<td>多媒体优先级业务</td>
+</tr>
+<tr>
+<td>MPTY</td>
+<td>Multiparty service</td>
+<td>多方通话</td>
 </tr>
 <tr>
 <td>MRFC</td>
@@ -231,19 +751,29 @@
 <td>多媒体资源功能处理器</td>
 </tr>
 <tr>
-<td>PDP</td>
-<td>Packet Data Protocol</td>
-<td>分组数据协议</td>
+<td>MSC</td>
+<td>Mobile Switching Center</td>
+<td>移动交换中心</td>
 </tr>
 <tr>
-<td>PLMN</td>
-<td>Public  Land  Mobile  Network</td>
-<td>公用陆地移动（通信）网</td>
+<td>MSISDN</td>
+<td>Mobile Station International ISDN number</td>
+<td>移动台国际ISDN号码</td>
 </tr>
 <tr>
-<td>PSTN</td>
-<td>Public Switched Telephone Network</td>
-<td>公共交换电话网</td>
+<td>MSRN</td>
+<td>Mobile Station Roaming Number</td>
+<td>移动台漫游号码</td>
+</tr>
+<tr>
+<td>MVNE</td>
+<td>Mobile Virtual Network Enabler</td>
+<td>移动虚拟网络提供商</td>
+</tr>
+<tr>
+<td>MVNO</td>
+<td>Mobile Virtual Network Operator</td>
+<td>移动虚拟网络运营商</td>
 </tr>
 <tr>
 <td>NAI</td>
@@ -251,9 +781,99 @@
 <td>网络接入标识</td>
 </tr>
 <tr>
+<td>NAPTR</td>
+<td>Naming Authority Pointer</td>
+<td>名称权威指针</td>
+</tr>
+<tr>
+<td>N-CSI</td>
+<td>Network Service CAMEL Subscription Information</td>
+<td>网络CAMEL签约信息</td>
+</tr>
+<tr>
+<td>NEBS</td>
+<td>Network Equipment Building System</td>
+<td>网络设备建构系统</td>
+</tr>
+<tr>
+<td>NP</td>
+<td>Number Portability</td>
+<td>号码携带</td>
+</tr>
+<tr>
+<td>OCS</td>
+<td>Online Charging System</td>
+<td>在线计费系统</td>
+</tr>
+<tr>
+<td>O-CSI</td>
+<td>Originating CAMEL Subscription Information</td>
+<td>始发CAMEL签约信息</td>
+</tr>
+<tr>
+<td>OMA</td>
+<td>Open Mobile Architecture</td>
+<td>开放移动联盟</td>
+</tr>
+<tr>
+<td>OMA DS</td>
+<td>OMA Data Synchronization</td>
+<td>OMA数据同步</td>
+</tr>
+<tr>
+<td>OMA IM</td>
+<td>OMA Instant Message</td>
+<td>OMA即时消息</td>
+</tr>
+<tr>
+<td>OMU</td>
+<td>Operation and Maintenance Unit</td>
+<td>操作维护单元</td>
+</tr>
+<tr>
+<td>OSS</td>
+<td>Operating Support System</td>
+<td>运营支撑系统</td>
+</tr>
+<tr>
+<td>OSTA</td>
+<td>Open Standards Telecom Architecture</td>
+<td>开放标准电信架构</td>
+</tr>
+<tr>
+<td>OTT</td>
+<td>Over The Top</td>
+<td>是指使用诸如Skype等的语音软件</td>
+</tr>
+<tr>
+<td>PCC</td>
+<td>Policy and Charging Control</td>
+<td>策略与计费控制</td>
+</tr>
+<tr>
+<td>PCM</td>
+<td>Pulse Code Modulation</td>
+<td>脉冲编码调制</td>
+</tr>
+<tr>
+<td>PCRF</td>
+<td>Policy and Charging Rules Function</td>
+<td>策略和计费规则功能</td>
+</tr>
+<tr>
 <td>P-CSCF</td>
-<td>Proxy CSCF</td>
-<td>代理 CSCF</td>
+<td>Proxy-Call Session Control Function</td>
+<td>代理-呼叫会话控制功能</td>
+</tr>
+<tr>
+<td>PDN</td>
+<td>Packet Data Network</td>
+<td>分组数据网</td>
+</tr>
+<tr>
+<td>PDP</td>
+<td>Packet Data Protocol</td>
+<td>分组数据协议</td>
 </tr>
 <tr>
 <td>PDU</td>
@@ -261,14 +881,74 @@
 <td>协议数据单元</td>
 </tr>
 <tr>
+<td>P-GW</td>
+<td>PDN GateWay</td>
+<td>PDN网关</td>
+</tr>
+<tr>
+<td>PISI</td>
+<td>PrIvate Service Identity</td>
+<td>私有业务标识</td>
+</tr>
+<tr>
+<td>PLMN</td>
+<td>Public Land Mobile Network</td>
+<td>公用陆地移动（通信）网</td>
+</tr>
+<tr>
+<td>PNA</td>
+<td>Push Notification Answer</td>
+<td>通知响应</td>
+</tr>
+<tr>
+<td>PNR</td>
+<td>Push Notification Request</td>
+<td>通知请求</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>Packet Switched</td>
+<td>分组交换</td>
+</tr>
+<tr>
+<td>PSAP</td>
+<td>Public Safety Answering Point</td>
+<td>紧急呼叫中心</td>
+</tr>
+<tr>
 <td>PSI</td>
 <td>Public Service Identity</td>
 <td>公共业务标识</td>
 </tr>
 <tr>
+<td>PSTN</td>
+<td>Public Switched Telephone Network</td>
+<td>公共交换电话网</td>
+</tr>
+<tr>
+<td>PUSI</td>
+<td>PUblic Service Identity</td>
+<td>公有业务标识</td>
+</tr>
+<tr>
+<td>QCI</td>
+<td>QoS Class Identifier</td>
+<td>QoS分类识别码</td>
+</tr>
+<tr>
+<td>QoS</td>
+<td>Quality of Service</td>
+<td>服务质量</td>
+</tr>
+<tr>
+<td>RA</td>
+<td>Routing Area</td>
+<td>路由区</td>
+</tr>
+<tr>
 <td>RAND</td>
-<td>RANDom challenge</td>
-<td>随机询问</td>
+<td>Random challenge</td>
+<td>随机挑战询问</td>
 </tr>
 <tr>
 <td>RES</td>
@@ -286,14 +966,64 @@
 <td>实时传输协议</td>
 </tr>
 <tr>
+<td>SAE</td>
+<td>System Architecture Evolution</td>
+<td>系统架构演进</td>
+</tr>
+<tr>
+<td>SAI</td>
+<td>Send Authentication Information</td>
+<td>服务区标识</td>
+</tr>
+<tr>
+<td>SAR</td>
+<td>Server Assignment Request</td>
+<td>服务器分配请求</td>
+</tr>
+<tr>
+<td>SBC</td>
+<td>Session Border Controller</td>
+<td>会话边界控制器</td>
+</tr>
+<tr>
+<td>SCP</td>
+<td>Service Control Point</td>
+<td>业务控制点</td>
+</tr>
+<tr>
 <td>S-CSCF</td>
-<td>Serving-CSCF</td>
-<td>服务 -SCSCF</td>
+<td>Serving-Call Session Control Function</td>
+<td>服务类型的会话控制功能</td>
+</tr>
+<tr>
+<td>SCTP</td>
+<td>Stream Control Transmission Protocol</td>
+<td>流控制传输协议</td>
 </tr>
 <tr>
 <td>SDP</td>
 <td>Session Description Protocol</td>
 <td>会话描述协议</td>
+</tr>
+<tr>
+<td>SGsAP</td>
+<td>SGs Application Protocol</td>
+<td>SGs应用协议</td>
+</tr>
+<tr>
+<td>SGSN</td>
+<td>Serving GPRS Support Node</td>
+<td>GPRS业务支撑节点</td>
+</tr>
+<tr>
+<td>SGW/S-GW</td>
+<td>Serving GateWay</td>
+<td>服务网关</td>
+</tr>
+<tr>
+<td>Single Radio</td>
+<td>Single Radio mode</td>
+<td>单终端单卡双模单待</td>
 </tr>
 <tr>
 <td>SIP</td>
@@ -306,9 +1036,79 @@
 <td>签约 定位 功能</td>
 </tr>
 <tr>
+<td>SMS</td>
+<td>Short Message Service</td>
+<td>短消息业务</td>
+</tr>
+<tr>
+<td>SMSC</td>
+<td>Short Message Service Center</td>
+<td>短消息业务中心</td>
+</tr>
+<tr>
+<td>SNMP</td>
+<td>Simple Network Management Protocol</td>
+<td>简单网络管理协议</td>
+</tr>
+<tr>
+<td>SOAP</td>
+<td>Simple Object Access Protocol</td>
+<td>简单对象访问协议</td>
+</tr>
+<tr>
+<td>SPG</td>
+<td>Service Provisioning Gateway</td>
+<td>业务发放网关</td>
+</tr>
+<tr>
 <td>SQN</td>
-<td>SeQuence Number</td>
-<td>顺序号</td>
+<td>Sequence Number</td>
+<td>序号</td>
+</tr>
+<tr>
+<td>SRVCC</td>
+<td>Single Radio Voice Call Continuity</td>
+<td>单待语音连续</td>
+</tr>
+<tr>
+<td>SVLTE</td>
+<td>Simultaneous Voice and LTE</td>
+<td>也称为Dual Radio终端</td>
+</tr>
+<tr>
+<td>TA</td>
+<td>Tracking Area</td>
+<td>跟踪区</td>
+</tr>
+<tr>
+<td>TAS</td>
+<td>transmit antenna switch</td>
+<td>传输天线开关</td>
+</tr>
+<tr>
+<td>TAU</td>
+<td>Tracking Area Update</td>
+<td>跟踪区更新</td>
+</tr>
+<tr>
+<td>T-CSI</td>
+<td>Terminating CAMEL Subscription Information</td>
+<td>终止CAMEL签约信息</td>
+</tr>
+<tr>
+<td>TFO</td>
+<td>Tandem Free Operation</td>
+<td>免二次编解码操作</td>
+</tr>
+<tr>
+<td>TISPAN</td>
+<td>Telecommunications and Internet converged Services and Protocols for Advanced Networking</td>
+<td>电信和互联网融合业务与协议</td>
+</tr>
+<tr>
+<td>TrFO</td>
+<td>Transcoder Free Operation</td>
+<td>免码变换操作</td>
 </tr>
 <tr>
 <td>UA</td>
@@ -326,14 +1126,34 @@
 <td>用户代理服务器</td>
 </tr>
 <tr>
+<td>UDR</td>
+<td>User Data Request</td>
+<td>按用户的规定选路</td>
+</tr>
+<tr>
 <td>UE</td>
 <td>User Equipment</td>
 <td>用户设备</td>
 </tr>
 <tr>
+<td>UE-AMBR</td>
+<td>per UE Aggregate Maximum Bit Rate</td>
+<td>每个UE聚合最大比特率</td>
+</tr>
+<tr>
 <td>UICC</td>
 <td>Universal Integrated Circuit Card</td>
 <td>通用集成电路卡</td>
+</tr>
+<tr>
+<td>UL TFT</td>
+<td>UpLink Traffic Flow Template</td>
+<td>上行链路业务流模板</td>
+</tr>
+<tr>
+<td>UPCC</td>
+<td>Unified Policy and Charging Controller</td>
+<td>统一策略和计费控制系统</td>
 </tr>
 <tr>
 <td>URI</td>
@@ -346,9 +1166,69 @@
 <td>统一资源定位</td>
 </tr>
 <tr>
+<td>USCDB</td>
+<td>Unified Subscriber Center Database</td>
+<td>统一用户数据中心数据库</td>
+</tr>
+<tr>
 <td>USIM</td>
 <td>Universal Subscriber Identity Module</td>
 <td>通用用户标识模块</td>
+</tr>
+<tr>
+<td>USSD</td>
+<td>Unstructured Supplementary Service Data</td>
+<td>结构化补充业务数据</td>
+</tr>
+<tr>
+<td>UTRAN</td>
+<td>Universal Terrestrial Radio Access Network</td>
+<td>UMTS陆地无线接入网</td>
+</tr>
+<tr>
+<td>VIG</td>
+<td>Video Interworking Gateway</td>
+<td>视频互通网关</td>
+</tr>
+<tr>
+<td>VLAN</td>
+<td>Virtual Local Area Network</td>
+<td>虚拟局域网</td>
+</tr>
+<tr>
+<td>VMSC</td>
+<td>Visited Mobile Switching Center</td>
+<td>受访的移动交换中心</td>
+</tr>
+<tr>
+<td>VoBB</td>
+<td>Voice over Broadband</td>
+<td>宽带语音业务</td>
+</tr>
+<tr>
+<td>VOLTE</td>
+<td>Voice over Long-Term Evolution</td>
+<td>长期演进语音承载</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>Virtual Private Network</td>
+<td>虚拟专用网</td>
+</tr>
+<tr>
+<td>VRRP</td>
+<td>Virtual Router Redundancy Protocol</td>
+<td>虚拟路由冗余协议</td>
+</tr>
+<tr>
+<td>Web Portal</td>
+<td>Web Portal</td>
+<td>入口站点</td>
+</tr>
+<tr>
+<td>WSDL</td>
+<td>Web Service Description Language</td>
+<td>Web业务描述语言</td>
 </tr>
 <tr>
 <td>XMAC</td>
@@ -361,9 +1241,9 @@
 <td>扩展标记语言</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>XRES</td>
+<td>Expected Response</td>
+<td>期望响应</td>
 </tr>
 </tbody>
 </table>
